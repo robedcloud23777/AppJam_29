@@ -19,7 +19,7 @@ public class AxeItemData : ToolItemData
         return new AxeItem(this);
     }
 }
-public class AxeItem : ToolItem, ICooldownDisplayed
+public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
 {
     new public readonly AxeItemData data;
     public Axe axe => base.tool as Axe;
@@ -79,5 +79,12 @@ public class AxeItem : ToolItem, ICooldownDisplayed
                 toolType = ToolType.Axe
             });
         }
+    }
+    public IEnumerable<LangText> GetStats()
+    {
+        yield return new()
+        {
+            kr = $"공격 쿨타임: {data.attackCooldown}s"
+        };
     }
 }

@@ -227,6 +227,7 @@ MonoBehaviour:
   - 5
   - 10
   m_harvestLoot: {fileID: 11400000, guid: a62bfd336f607f84683e99ed8f155286, type: 2}
+  m_harvestExperience: 35
 --- !u!95 &8554937327910555904
 Animator:
   serializedVersion: 7

@@ -17,7 +17,7 @@ public class SickleItemData : ToolItemData
         return new SickleItem(this);
     }
 }
-public class SickleItem : ToolItem, ICooldownDisplayed
+public class SickleItem : ToolItem, ICooldownDisplayed, IStatDisplayed
 {
     new public readonly SickleItemData data;
     public Sickle Sickle => base.tool as Sickle;
@@ -40,6 +40,7 @@ public class SickleItem : ToolItem, ICooldownDisplayed
                     {
                         if (land.plantedCrop.mature)
                         {
+                            wielder.statistics.chillExperience += land.plantedCrop.harvestExperience;
                             foreach(var k in land.plantedCrop.harvestLoot.GenerateLoot())
                             {
                                 wielder.inventory.Insert_DropRest(k.item, k.count);
@@ -55,5 +56,13 @@ public class SickleItem : ToolItem, ICooldownDisplayed
                 }
             }
         }
+    }
+
+    public IEnumerable<LangText> GetStats()
+    {
+        yield return new()
+        {
+            kr = $"제배 쿨타임: {data.harvestCooldown}s"
+        };
     }
 }

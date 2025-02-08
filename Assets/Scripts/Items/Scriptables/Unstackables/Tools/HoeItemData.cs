@@ -11,15 +11,17 @@ public class HoeItemData : ToolItemData
     [SerializeField] TilledLand m_tilledLandPrefab;
     [SerializeField] CooldownSource m_tillCooldownSource;
     [SerializeField] float m_tillCooldown;
+    [SerializeField] int m_tillingExperience;
     public TilledLand tilledLandPrefab => m_tilledLandPrefab;
     public CooldownSource tillCooldownSource => m_tillCooldownSource;
     public float tillCooldown => m_tillCooldown;
+    public int tillingExperience => m_tillingExperience;
     public override Item Create()
     {
         return new HoeItem(this);
     }
 }
-public class HoeItem : ToolItem, ICooldownDisplayed
+public class HoeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
 {
     new public readonly HoeItemData data;
     public Hoe hoe => base.tool as Hoe;
@@ -45,7 +47,15 @@ public class HoeItem : ToolItem, ICooldownDisplayed
     }
     void Till(Vector2 pos)
     {
+        wielder.statistics.chillExperience += data.tillingExperience;
         TilledLand tmp = data.tilledLandPrefab.Instantiate() as TilledLand;
         tmp.transform.position = pos;
+    }
+    public IEnumerable<LangText> GetStats()
+    {
+        yield return new()
+        {
+            kr = $"경작 쿨타임: {data.tillCooldown}s"
+        };
     }
 }

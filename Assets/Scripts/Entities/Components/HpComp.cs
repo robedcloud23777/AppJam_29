@@ -18,7 +18,7 @@ public abstract class HpComp : MonoBehaviour, IDamagable
     public bool dead { get; private set; } = false;
     public DamageReceivedData GetDamage(DamageData damage)
     {
-        if (dead) return new() { amount = 0 };
+        if (dead || damage.amount <= 0) return new() { amount = 0 };
 
         DamageReceivedData data = new();
 
@@ -29,6 +29,7 @@ public abstract class HpComp : MonoBehaviour, IDamagable
             dead = true;
             OnDeath();
         }
+        onDamage?.Invoke(data);
         return new();
     }
     protected virtual void OnDeath() { }

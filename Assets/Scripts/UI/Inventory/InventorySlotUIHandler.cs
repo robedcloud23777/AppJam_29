@@ -12,6 +12,9 @@ public class InventorySlotUIHandler : MonoBehaviour
     [Header("Desc")]
     [SerializeField] RectTransform describer;
     [SerializeField] TMP_Text itemName, itemDesc;
+    [SerializeField] Transform stats;
+    [SerializeField] TMP_Text statTextPrefab;
+    List<TMP_Text> statTexts = new();
     public InventorySlot grabbingSlot { get; } = new();
     private void Awake()
     {
@@ -106,8 +109,27 @@ public class InventorySlotUIHandler : MonoBehaviour
     void Describe(Item item)
     {
         if (item == null) return;
+
         describing = item;
+
         itemName.text = item.data.itemName.text;
         itemDesc.text = item.data.description.text;
+
+        if (item is IStatDisplayed)
+        {
+            stats.gameObject.SetActive(true);
+            int index = 0;
+            foreach(var i in (item as IStatDisplayed).GetStats())
+            {
+                if (statTexts.Count <= index) statTexts.Add(Instantiate(statTextPrefab, stats));
+                statTexts[index].text = i.text;
+                statTexts[index++].gameObject.SetActive(true);
+            }
+            for(int i = index; i < statTexts.Count; i++)
+            {
+                statTexts[i].gameObject.SetActive(false);
+            }
+        }
+        else stats.gameObject.SetActive(false);
     }
 }

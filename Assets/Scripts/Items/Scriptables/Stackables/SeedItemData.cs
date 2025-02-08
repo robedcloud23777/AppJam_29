@@ -22,7 +22,7 @@ public class SeedItem : StackableItem
         this.data = data;
     }
     bool seeding = false;
-    const float seedingSpeedMultiplier = 0.3f;
+    const float seedingSpeedMultiplier = 0.75f;
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
