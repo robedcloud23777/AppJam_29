@@ -21,6 +21,7 @@ public abstract class ItemData : ScriptableObject
 public abstract class Item
 {
     public readonly ItemData data;
+    public virtual AnimationType heldAnimation => AnimationType.None;
     public virtual bool canDrop => true;
     public Item(ItemData data)
     {

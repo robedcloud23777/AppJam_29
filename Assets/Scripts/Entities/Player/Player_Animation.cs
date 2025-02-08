@@ -11,6 +11,7 @@ public class Player_Animation : MonoBehaviour
     {
         origin = GetComponent<Player>();
         anim = GetComponent<Animator>();
+        origin.inventory.onEquippedItemChange += OnEquippedItemChange;
     }
     readonly int moveXID = Animator.StringToHash("MoveX");
     readonly int moveYID = Animator.StringToHash("MoveY");
@@ -19,4 +20,13 @@ public class Player_Animation : MonoBehaviour
         anim.SetFloat(moveXID, origin.movement.move.x);
         anim.SetFloat(moveYID, origin.movement.move.y);
     }
+    readonly int animationTypeID = Animator.StringToHash("AnimationType");
+    void OnEquippedItemChange(Item item)
+    {
+        anim.SetInteger(animationTypeID, (int)item.heldAnimation);
+    }
+}
+public enum AnimationType
+{
+    None = 0
 }
