@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Player_Movement), typeof(Player_Animation), typeof(Player_Inventory))]
-[RequireComponent(typeof(Player_Cooldowns), typeof(Player_Statistics))]
+[RequireComponent(typeof(Player_Cooldowns), typeof(Player_Statistics), typeof(Player_Interactions))]
 public class Player : MonoBehaviour
 {
     internal Player_Movement movement { get; private set; }
@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     internal Player_Inventory inventory { get; private set; }
     internal Player_Cooldowns cooldowns { get; private set; }
     internal Player_Statistics statistics { get; private set; }
+    internal Player_Interactions interactions { get; private set; }
     private void Awake()
     {
         movement = GetComponent<Player_Movement>();
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
         inventory = GetComponent<Player_Inventory>();
         cooldowns = GetComponent<Player_Cooldowns>();
         statistics = GetComponent<Player_Statistics>();
+        interactions = GetComponent<Player_Interactions>();
         movement.OnAwake();
         animation.OnAwake();
         inventory.OnAwake();
@@ -27,6 +29,7 @@ public class Player : MonoBehaviour
         cooldowns.OnUpdate();
         animation.OnUpdate();
         inventory.OnUpdate();
+        interactions.OnUpdate();
     }
     private void FixedUpdate()
     {

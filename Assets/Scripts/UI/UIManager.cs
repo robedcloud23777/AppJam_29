@@ -11,7 +11,9 @@ public class UIManager : MonoBehaviour
     public UIManager() => Instance = this;
     [Header("Tabs")]
     [SerializeField] InventoryTab m_inventoryTab;
+    [SerializeField] ShopTab m_shopTab;
     public InventoryTab inventoryTab => m_inventoryTab;
+    public ShopTab shopTab => m_shopTab;
 
     [Header("Stats")]
     [SerializeField] TMP_Text moneyText;
@@ -78,5 +80,6 @@ public class UIManager : MonoBehaviour
         {
             OpenTab(inventoryTab);
         }
+        if (Input.GetKeyDown(KeyCode.Escape)) CloseTab();
     }
 }

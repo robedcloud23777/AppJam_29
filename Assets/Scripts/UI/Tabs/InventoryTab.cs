@@ -7,6 +7,7 @@ using DG.Tweening;
 
 public class InventoryTab : Tab
 {
+    [Header("Tab")]
     [SerializeField] float toggleTime = 0.25f;
     [SerializeField] float openPivotY, closedPivotY;
     [SerializeField] new RectTransform transform;
