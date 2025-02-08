@@ -14,14 +14,18 @@ public class Player_Inventory : Inventory, ISavable
     {
         origin = GetComponent<Player>();
         Init();
-
-        for(int i = 0; i < startContent.Length; i++)
+    }
+    internal void OnStart()
+    {
+        if (!loaded)
         {
-            if (startContent[i].data == null) continue;
-            slots[i].SetItem(startContent[i].data.Create());
-            slots[i].count = startContent[i].count;
+            for (int i = 0; i < startContent.Length; i++)
+            {
+                if (startContent[i].data == null) continue;
+                slots[i].SetItem(startContent[i].data.Create());
+                slots[i].count = startContent[i].count;
+            }
         }
-
         ChangeEquippedSlot(0);
     }
     internal void OnUpdate()
@@ -86,9 +90,10 @@ public class Player_Inventory : Inventory, ISavable
     {
         data.player.strings["inventory"] = JsonUtility.ToJson(Save());
     }
-
+    bool loaded = false;
     public void Load(SaveData data)
     {
+        loaded = true;
         if (data.player.strings.TryGetValue("inventory", out string tmp)) Load(JsonUtility.FromJson<InventorySaveData>(tmp));
     }
 }

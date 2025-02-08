@@ -9,7 +9,7 @@ public class PooledPrefab<T> : MonoBehaviour where T : PooledPrefab<T>
     protected virtual int maxPoolSize => 100;
     protected virtual int defaultPoolSize => 0;
 
-    public T prefabOrigin { get; private set; } = null;
+    public T prefabOrigin { get; protected set; } = null;
     Pooler<T> pool = null;
     public T Instantiate()
     {

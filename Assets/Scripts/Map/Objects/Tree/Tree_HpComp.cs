@@ -22,8 +22,7 @@ public class Tree_HpComp : HpComp
         {
             player.Insert_DropRest(i.item, i.count);
         }
-        if (origin.prefabOrigin == null) origin.gameObject.SetActive(false);
-        else origin.Release();
+        origin.Release();
     }
     public override DamageReceivedData GetDamage(DamageData damage)
     {

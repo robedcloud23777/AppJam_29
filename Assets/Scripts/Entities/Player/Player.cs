@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
         animation.OnAwake();
         inventory.OnAwake();
     }
+    private void Start()
+    {
+        inventory.OnStart();
+    }
     private void Update()
     {
         cooldowns.OnUpdate();

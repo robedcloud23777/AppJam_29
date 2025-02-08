@@ -33,5 +33,14 @@ public abstract class HpComp : MonoBehaviour, IDamagable
         onDamage?.Invoke(data);
         return new();
     }
+    public void SetHp(float hp)
+    {
+        hp = Mathf.Clamp(hp, 0.0f, maxHp);
+        if(hp <= 0.0f)
+        {
+            dead = true;
+            OnDeath();
+        }
+    }
     protected virtual void OnDeath() { }
 }
