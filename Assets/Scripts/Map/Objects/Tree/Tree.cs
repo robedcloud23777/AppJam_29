@@ -13,8 +13,9 @@ public class Tree : MapElement
     {
         MapManager.Instance.AddElement(this);
     }
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         hpComp = GetComponent<Tree_HpComp>();
         hpComp.OnAwake();
     }

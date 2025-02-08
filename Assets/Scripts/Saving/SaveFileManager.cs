@@ -37,7 +37,7 @@ public class SaveFileManager : MonoBehaviour
             {
                 using (StreamWriter writer = new StreamWriter(stream))
                 {
-                    writer.Write(JsonUtility.ToJson(data));
+                    writer.Write(JsonUtility.ToJson(data, true));
                 }
             }
         }

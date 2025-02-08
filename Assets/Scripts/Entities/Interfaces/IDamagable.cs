@@ -25,4 +25,5 @@ public enum ToolType
 public struct DamageReceivedData
 {
     public float amount;
+    public bool fatal;
 }

@@ -13,18 +13,9 @@ public class MapManager : MonoBehaviour, ISavable
     bool loaded = false;
     void Start()
     {
-        if (!loaded)
-        {
-            foreach(var i in startElements)
-            {
-                mapElements.Add(i);
-            }
-        }
-        else
-        {
-            foreach (var i in startElements) i.gameObject.SetActive(false);
-        }
+        if (loaded) foreach (var i in startElements) i.gameObject.SetActive(false);
     }
+    Dictionary<string, MapElement> resourceLoaded = new();
     public void Load(SaveData data)
     {
         loaded = true;
@@ -32,7 +23,8 @@ public class MapManager : MonoBehaviour, ISavable
         {
             if(i.strings.TryGetValue("prefab", out string tmp))
             {
-                MapElement prefab = Resources.Load<MapElement>("Map/" + tmp);
+                if (!resourceLoaded.ContainsKey(tmp)) resourceLoaded.Add(tmp, Resources.Load<MapElement>("Map/" + tmp));
+                MapElement prefab = resourceLoaded[tmp];
                 if(prefab != null)
                 {
                     MapElement tmp2 = prefab.Instantiate();
@@ -47,6 +39,7 @@ public class MapManager : MonoBehaviour, ISavable
         
         foreach(var i in mapElements)
         {
+            if (i.prefabOrigin == null) continue;
             DataUnit tmp = new();
             tmp.strings["prefab"] = i.prefabOrigin.name;
             i.Save(tmp);
@@ -55,10 +48,12 @@ public class MapManager : MonoBehaviour, ISavable
     }
     public void AddElement(MapElement element)
     {
+        if (mapElements.Contains(element)) return;
         mapElements.Add(element);
     }
     public void RemoveElement(MapElement element)
     {
+        if(!mapElements.Contains(element)) return;
         mapElements.Remove(element);
     }
 }

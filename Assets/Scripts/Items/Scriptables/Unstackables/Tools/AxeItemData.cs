@@ -11,9 +11,11 @@ public class AxeItemData : ToolItemData
     [SerializeField] float m_damage;
     [SerializeField] CooldownSource m_attackCooldownSource;
     [SerializeField] float m_attackCooldown;
+    [SerializeField] int m_chopExperience;
     public float damage => m_damage;
     public CooldownSource attackCooldownSource => m_attackCooldownSource;
     public float attackCooldown => m_attackCooldown;
+    public int chopExperience => m_chopExperience;
     public override Item Create()
     {
         return new AxeItem(this);
@@ -74,11 +76,11 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
         
         if(hitObject.TryGetComponent(out IDamagable tmp))
         {
-            tmp.GetDamage(new()
+            if (tmp.GetDamage(new()
             {
                 amount = data.damage,
                 toolType = ToolType.Axe
-            });
+            }).fatal) wielder.statistics.chillExperience += data.chopExperience;
             hit = true;
         }
     }

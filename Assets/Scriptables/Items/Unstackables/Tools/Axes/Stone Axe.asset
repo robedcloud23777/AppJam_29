@@ -24,3 +24,4 @@ MonoBehaviour:
   m_damage: 20
   m_attackCooldownSource: {fileID: 11400000, guid: f6183bd1d81ec0443bc32c5bb310d69c, type: 2}
   m_attackCooldown: 1
+  m_chopExperience: 175

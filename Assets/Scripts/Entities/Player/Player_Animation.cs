@@ -49,5 +49,6 @@ public enum AnimationType
     Hoe = 1,
     Sickle = 2,
     Axe = 3,
-    Seed = 4
+    Seed = 4,
+    FishingRod = 5
 }

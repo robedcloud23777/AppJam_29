@@ -27,6 +27,7 @@ public abstract class HpComp : MonoBehaviour, IDamagable
         hp = Mathf.Max(0.0f, hp - damage.amount);
         if(hp <= 0.0f)
         {
+            data.fatal = true;
             dead = true;
             OnDeath();
         }

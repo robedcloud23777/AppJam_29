@@ -6,7 +6,7 @@ public abstract class MapElement : PooledPrefab<MapElement>
 {
     [Header("Pre-Instanced")]
     [SerializeField] MapElement m_prefabOrigin;
-    private void Awake()
+    protected virtual void Awake()
     {
         prefabOrigin = m_prefabOrigin;
     }
@@ -27,7 +27,7 @@ public abstract class MapElement : PooledPrefab<MapElement>
     {
         Vector2 pos = new();
         if (data.floats.TryGetValue("posX", out float x)) pos.x = x;
-        if (data.floats.TryGetValue("poxY", out float y)) pos.y = y;
+        if (data.floats.TryGetValue("posY", out float y)) pos.y = y;
         transform.position = pos;
     }
 }

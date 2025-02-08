@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Player_Movement), typeof(Player_Animation), typeof(Player_Inventory))]
 [RequireComponent(typeof(Player_Cooldowns), typeof(Player_Statistics), typeof(Player_Interactions))]
+[RequireComponent(typeof(Player_Misc))]
 public class Player : MonoBehaviour
 {
     internal Player_Movement movement { get; private set; }
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour
     internal Player_Cooldowns cooldowns { get; private set; }
     internal Player_Statistics statistics { get; private set; }
     internal Player_Interactions interactions { get; private set; }
+    internal Player_Misc misc { get; private set; }
     private void Awake()
     {
         movement = GetComponent<Player_Movement>();
@@ -20,6 +22,7 @@ public class Player : MonoBehaviour
         cooldowns = GetComponent<Player_Cooldowns>();
         statistics = GetComponent<Player_Statistics>();
         interactions = GetComponent<Player_Interactions>();
+        misc = GetComponent<Player_Misc>();
         movement.OnAwake();
         animation.OnAwake();
         inventory.OnAwake();

@@ -179,4 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5030300d70b1a439b9d7670d246efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_prefab: {fileID: 3061519789692863253}
   plantedCrop: {fileID: 0}
