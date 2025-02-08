@@ -31,21 +31,35 @@ public class Inventory : MonoBehaviour
     }
     public int Insert(Item item, int count)
     {
+        int tmp = count;
         foreach(var i in slots)
         {
             if(i.item != null && i.item.IsStackable(item) && item.IsStackable(i.item))
             {
                 count = i.Insert(item, count);
-                if (count <= 0) return 0;
+                if (count <= 0)
+                {
+                    OnInsert(item, tmp - count);
+                    return 0;
+                }
             }
         }
         for(int i = 0; i < slotCount; i++)
         {
             count = slots[i].Insert(item.Copy(), count);
-            if (count <= 0) return 0;
+            if (count <= 0)
+            {
+                OnInsert(item, tmp - count);
+                return 0;
+            }
         }
+        OnInsert(item, tmp - count);
         onInventoryUpdate?.Invoke(item);
         return count;
+    }
+    protected virtual void OnInsert(Item item, int count)
+    {
+
     }
     public int Search(ItemData data)
     {

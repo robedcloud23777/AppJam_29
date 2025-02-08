@@ -8,6 +8,7 @@ public class Player_Inventory : Inventory
     Player origin;
     [SerializeField] Transform m_equipmentAnchor;
     [SerializeField] ItemDataIntPair[] startContent;
+    [SerializeField] ItemObtainText obtainTextPrefab;
     public Transform equipmentAnchor => m_equipmentAnchor;
     internal void OnAwake()
     {
@@ -40,7 +41,7 @@ public class Player_Inventory : Inventory
     InventorySlot equippedSlot;
     Item equipped;
 
-    public const float beltLength = 6;
+    public const int beltLength = 6;
     void ChangeEquippedSlot(int index)
     {
         if (index < 0 || index >= beltLength || index == equippedSlotIndex) return;
@@ -61,5 +62,23 @@ public class Player_Inventory : Inventory
         equipped = item;
         onEquippedItemChange?.Invoke(equipped);
         if (equipped != null) equipped.OnWield(origin);
+    }
+    protected override void OnInsert(Item item, int count)
+    {
+        base.OnInsert(item, count);
+        obtainTextPrefab.Instantiate().Set(item, count, transform.position);
+        Debug.Log(item.data.itemName.text);
+    }
+    public void Insert_DropRest(Item item, int count)
+    {
+        count = Insert(item, count);
+        if(count > 0)
+        {
+            DropItem(item.Copy(), count);
+        }
+    }
+    public void DropItem(Item item, int count)
+    {
+
     }
 }

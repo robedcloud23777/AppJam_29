@@ -39,7 +39,7 @@ public class AxeItem : ToolItem, ICooldownDisplayed
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
-        if(Input.GetMouseButtonDown(0) && !data.attackCooldownSource.isOnCooldown)
+        if(Input.GetMouseButtonDown(0) && UIScanner.ScanUI().Count <= 0 && !data.attackCooldownSource.isOnCooldown)
         {
             wielder.animation.TriggerAttack();
             data.attackCooldownSource.cooldown = data.attackCooldown;

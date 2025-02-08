@@ -31,7 +31,7 @@ public class HoeItem : ToolItem, ICooldownDisplayed
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
-        if (Input.GetMouseButtonDown(0) && !data.tillCooldownSource.isOnCooldown)
+        if (Input.GetMouseButton(0) && UIScanner.ScanUI().Count <= 0 && !data.tillCooldownSource.isOnCooldown)
         {
             Vector2 pos = new Vector2(Mathf.Round(wielder.transform.position.x), Mathf.Round(wielder.transform.position.y));
             if (!Physics2D.BoxCast(pos, new Vector2(0.49f, 0.49f), 0.0f, Vector2.up, 0.0f, LayerMask.GetMask("Map")))

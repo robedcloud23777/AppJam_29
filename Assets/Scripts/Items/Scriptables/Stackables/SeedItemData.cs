@@ -26,7 +26,7 @@ public class SeedItem : StackableItem
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && UIScanner.ScanUI().Count <= 0)
         {
             if (!seeding)
             {

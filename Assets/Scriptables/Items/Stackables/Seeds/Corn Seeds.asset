@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f66feb55b71814f90a4b002868887c, type: 3}
+  m_Name: Corn Seeds
+  m_EditorClassIdentifier: 
+  m_itemName:
+    en: 
+    kr: "\uC625\uC218\uC218 \uC528\uC557"
+  m_description:
+    en: 
+    kr: "\uC2EC\uC73C\uBA74 \uC625\uC218\uC218\uAC00 \uC790\uB780\uB2E4."
+  m_itemIcon: {fileID: 21300000, guid: 111db94ccf6db2744b59258a8c079fde, type: 3}
+  m_category: 0
+  m_maxStack: 64
+  m_plantingCrop: {fileID: 7115320001256914333, guid: 02b3bc3cce66e62408152ea911e58394, type: 3}

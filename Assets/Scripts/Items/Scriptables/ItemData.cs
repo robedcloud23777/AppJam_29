@@ -62,10 +62,6 @@ public abstract class Item
     }
     public virtual void Save(DataUnit data) { }
     public virtual void Load(DataUnit data) { }
-    public static LangText CategoryToLangText(ItemCategory category)
-    {
-        return new();
-    }
 }
 [System.Serializable]
 public struct ItemDataIntPair
@@ -83,5 +79,6 @@ public struct ItemIntPair
 [Flags]
 public enum ItemCategory
 {
-
+    Tools = 1<<0,
+    Seeds = 1<<1
 }

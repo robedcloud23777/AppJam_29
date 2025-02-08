@@ -22,6 +22,7 @@ public class LootTable : ScriptableObject
         }
     }
 }
+[System.Serializable]
 public struct LootElement
 {
     public float chance;

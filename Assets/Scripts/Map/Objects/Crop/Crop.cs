@@ -7,6 +7,8 @@ public class Crop : PooledPrefab<Crop>
 {
     [SerializeField] Animator anim;
     [SerializeField] float[] growthStages;
+    [SerializeField] LootTable m_harvestLoot;
+    public LootTable harvestLoot => m_harvestLoot;
     int currentStage = 0;
     public float growth { get; private set; } = 0;
     public bool mature => currentStage >= growthStages.Length;
