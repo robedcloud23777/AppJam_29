@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
 
-
+[CreateAssetMenu(fileName = "Hoe Item Data", menuName = "Scriptables/Unstackables/Tools/Hoe", order = 0)]
 public class HoeItemData : ToolItemData
 {
     [Header("Hoe")]
