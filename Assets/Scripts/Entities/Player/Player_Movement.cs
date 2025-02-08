@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Player_Movement : MonoBehaviour
+public class Player_Movement : MonoBehaviour, ISavable
 {
     Player origin;
 
@@ -43,5 +43,19 @@ public class Player_Movement : MonoBehaviour
         {
             chillTime = 0.0f;
         }
+    }
+
+    public void Save(SaveData data)
+    {
+        data.player.floats["posX"] = transform.position.x;
+        data.player.floats["posY"] = transform.position.y;
+    }
+
+    public void Load(SaveData data)
+    {
+        Vector2 pos = new Vector2();
+        if (data.player.floats.TryGetValue("posX", out float tmp)) pos.x = tmp;
+        if (data.player.floats.TryGetValue("posY", out float tmp2)) pos.y = tmp2;
+        transform.position = pos;
     }
 }

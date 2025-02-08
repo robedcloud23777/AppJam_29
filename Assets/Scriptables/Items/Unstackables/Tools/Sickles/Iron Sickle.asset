@@ -19,7 +19,7 @@ MonoBehaviour:
     en: 
     kr: "\uC791\uBB3C\uC744 \uC544\uC8FC \uBE60\uB974\uAC8C \uC7AC\uBC30\uD560 \uC218
       \uC788\uC2B5\uB2C8\uB2E4."
-  m_itemIcon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_itemIcon: {fileID: 21300000, guid: c268da620335bcc4eabe30b3a0708095, type: 3}
   m_category: 0
   m_prefab: {fileID: 3935606340820441308, guid: 3fe60e92ccd34784baba9fdb7254ec03, type: 3}
   m_harvestCooldownSource: {fileID: 11400000, guid: 538b1e62846be674bbc338066d9893df, type: 2}

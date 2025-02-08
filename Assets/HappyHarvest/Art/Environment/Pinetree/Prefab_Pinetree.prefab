@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5334520902832063224}
   - component: {fileID: 7451988398238309491}
   - component: {fileID: 8382268574553292085}
+  - component: {fileID: 845900059315379816}
+  - component: {fileID: 8547917295162716715}
+  - component: {fileID: 452897060957721961}
   m_Layer: 0
   m_Name: Prefab_Pinetree
   m_TagString: Untagged
@@ -135,6 +138,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.88313234, y: 0.46309677}
   m_EdgeRadius: 0
+--- !u!114 &845900059315379816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838970799755907619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd39e6a77cd05b44b1387ad81267a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHp: 100
+--- !u!114 &8547917295162716715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838970799755907619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 834d69ad7199fd24eb56bde3c1d0b233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_loot: {fileID: 11400000, guid: b409aa07b9e2bbf4fae5bb30b0c07f60, type: 2}
+--- !u!114 &452897060957721961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838970799755907619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dffa31737d1883942a2a2a48bd715664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {fileID: 845900059315379816}
 --- !u!1001 &6659166170103900254
 PrefabInstance:
   m_ObjectHideFlags: 0

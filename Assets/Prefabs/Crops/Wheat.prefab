@@ -184,7 +184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 162914953227981309}
   - component: {fileID: 7115320001256914333}
-  - component: {fileID: 8554937327910555904}
   m_Layer: 7
   m_Name: Wheat
   m_TagString: Untagged
@@ -222,34 +221,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6b84141f08d544f8eeb42e27b912df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 8554937327910555904}
+  sproutModel: {fileID: 5232310252234287312}
   growthStages:
-  - 5
-  - 10
+  - growth: 2
+    model: {fileID: 7637275140868716527}
+  - growth: 4
+    model: {fileID: 4289453094107460756}
   m_harvestLoot: {fileID: 11400000, guid: a62bfd336f607f84683e99ed8f155286, type: 2}
   m_harvestExperience: 50
---- !u!95 &8554937327910555904
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696507275927407390}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a6568e8235967b74ea20d7cee9e15ebe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7637275140868716527
 GameObject:
   m_ObjectHideFlags: 0

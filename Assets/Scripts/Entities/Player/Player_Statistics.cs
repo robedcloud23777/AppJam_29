@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-public class Player_Statistics : MonoBehaviour
+public class Player_Statistics : MonoBehaviour, ISavable
 {
     [SerializeField] int m_money = 0;
     public Action onMoneyChange;
@@ -50,6 +50,20 @@ public class Player_Statistics : MonoBehaviour
         }
     }
     public int chillExperienceRequired => 500 + 100 * chillLevel;
+
+    public void Save(SaveData data)
+    {
+        data.player.integers["money"] = money;
+        data.player.integers["chillLevel"] = chillLevel;
+        data.player.integers["chillExperience"] = chillExperience;
+    }
+
+    public void Load(SaveData data)
+    {
+        if (data.player.integers.TryGetValue("money", out int tmp)) money = tmp;
+        if (data.player.integers.TryGetValue("chillLevel", out int tmp2)) chillLevel = tmp2;
+        if(data.player.integers.TryGetValue("chillExperience", out int tmp3)) chillExperience = tmp3;
+    }
 }
 #if UNITY_EDITOR
 [CustomEditor(typeof(Player_Statistics))]

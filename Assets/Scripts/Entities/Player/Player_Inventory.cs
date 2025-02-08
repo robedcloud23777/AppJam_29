@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Inventory : Inventory
+public class Player_Inventory : Inventory, ISavable
 {
     Player origin;
     [SerializeField] Transform m_equipmentAnchor;
@@ -66,8 +66,8 @@ public class Player_Inventory : Inventory
     protected override void OnInsert(Item item, int count)
     {
         base.OnInsert(item, count);
+        if (count == 0) return;
         obtainTextPrefab.Instantiate().Set(item, count, transform.position);
-        Debug.Log(item.data.itemName.text);
     }
     public void Insert_DropRest(Item item, int count)
     {
@@ -80,5 +80,15 @@ public class Player_Inventory : Inventory
     public void DropItem(Item item, int count)
     {
 
+    }
+
+    public void Save(SaveData data)
+    {
+        data.player.strings["inventory"] = JsonUtility.ToJson(Save());
+    }
+
+    public void Load(SaveData data)
+    {
+        if (data.player.strings.TryGetValue("inventory", out string tmp)) Load(JsonUtility.FromJson<InventorySaveData>(tmp));
     }
 }

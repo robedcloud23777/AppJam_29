@@ -10,6 +10,11 @@ public class FollowingCam : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
+    private void Start()
+    {
+        transform.position = player.transform.position;
+        transform.position = new Vector3(transform.position.x, transform.position.y, -10.0f);
+    }
     private void FixedUpdate()
     {
         transform.position = Vector2.Lerp(transform.position, player.transform.position, lerpRate * Time.fixedDeltaTime);

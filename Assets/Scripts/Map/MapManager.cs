@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class MapManager : MonoBehaviour, ISavable
 {
+    [SerializeField] MapElement[] startElements;
+    List<MapElement> mapElements = new();
     bool loaded = false;
     void Start()
     {
-        if (!loaded) GenerateMap();
-    }
-    void GenerateMap()
-    {
-
+        if (!loaded)
+        {
+            foreach(var i in startElements)
+            {
+                mapElements.Add(i);
+            }
+        }
+        else
+        {
+            foreach (var i in startElements) i.gameObject.SetActive(false);
+        }
     }
     public void Load(SaveData data)
     {

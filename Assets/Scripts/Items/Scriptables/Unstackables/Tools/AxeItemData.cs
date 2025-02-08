@@ -56,10 +56,11 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
         wielder.animation.onAttackEnd -= OnAttackEnd;
         attacking = false;
     }
-    List<GameObject> hit = new();
+    bool hit = false;
     void OnAttackStart()
     {
-        hit.Clear();
+        Debug.Log("AttackStart");
+        hit = false;
         attacking = true;
     }
     void OnAttackEnd()
@@ -68,10 +69,9 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
     }
     void OnTriggerStay(Collider2D other)
     {
-        if (!attacking) return;
+        if (!attacking || hit) return;
         GameObject hitObject = (other.attachedRigidbody == null ? other.gameObject : other.attachedRigidbody.gameObject);
-        if (hit.Contains(hitObject)) return;
-        hit.Add(hitObject);
+        
         if(hitObject.TryGetComponent(out IDamagable tmp))
         {
             tmp.GetDamage(new()
@@ -79,10 +79,15 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
                 amount = data.damage,
                 toolType = ToolType.Axe
             });
+            hit = true;
         }
     }
     public IEnumerable<LangText> GetStats()
     {
+        yield return new()
+        {
+            kr = $"공격 대미지: {data.damage}"
+        };
         yield return new()
         {
             kr = $"공격 쿨타임: {data.attackCooldown}s"

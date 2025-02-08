@@ -13,10 +13,11 @@ public abstract class HpComp : MonoBehaviour, IDamagable
     public Action<DamageReceivedData> onDamage;
     internal void Init()
     {
+        dead = false;
         hp = maxHp;
     }
     public bool dead { get; private set; } = false;
-    public DamageReceivedData GetDamage(DamageData damage)
+    public virtual DamageReceivedData GetDamage(DamageData damage)
     {
         if (dead || damage.amount <= 0) return new() { amount = 0 };
 
