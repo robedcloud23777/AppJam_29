@@ -9,6 +9,8 @@ public class PlayerInteractions : MonoBehaviour
     public float interactionRange;
     public LayerMask interactionLayer;
 
+    public GameObject marker;
+
     private void Awake()
     {
         instance = this;
@@ -18,11 +20,19 @@ public class PlayerInteractions : MonoBehaviour
     {
         interactions.Sort((a, b) => { return (int)Vector3.Distance(transform.position, a.transform.position) * 100 - (int)Vector3.Distance(transform.position, b.transform.position) * 100; });
 
+        if (interactions.Count > 0)
+        {
+            marker.SetActive(true);
+            marker.transform.position = interactions[0].transform.position + Vector3.up;
+        }
+        else
+            marker.SetActive(false);
+
+
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("??");
             interactions[0].GetComponent<Interaction>().OnInteract();
-            
+
         }
     }
 
