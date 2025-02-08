@@ -27,7 +27,7 @@ public class Player_Inventory : Inventory
     {
         for(int i = 0; i < beltLength; i++)
         {
-            if(Input.GetKeyDown(KeyCode.Alpha0 + i))
+            if(Input.GetKeyDown(KeyCode.Alpha1 + i))
             {
                 ChangeEquippedSlot(i);
                 break;
@@ -36,7 +36,7 @@ public class Player_Inventory : Inventory
 
         if (equipped != null) equipped.OnWieldUpdate();
     }
-    int equippedSlotIndex = -1;
+    public int equippedSlotIndex { get; private set; } = 1;
     InventorySlot equippedSlot;
     Item equipped;
 

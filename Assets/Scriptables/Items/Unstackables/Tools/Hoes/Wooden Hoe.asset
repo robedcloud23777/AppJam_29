@@ -18,8 +18,9 @@ MonoBehaviour:
   m_description:
     en: 
     kr: "\uB098\uBB34 \uAD2D\uC774\uC785\uB2C8\uB2E4."
-  m_itemIcon: {fileID: 0}
+  m_itemIcon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_category: 0
-  m_prefab: {fileID: 0}
+  m_prefab: {fileID: 9140363041918963786, guid: c82c94c5beb51d449b68be5167884840, type: 3}
+  m_tilledLandPrefab: {fileID: 3061519789692863253, guid: d51f05f734e8f5645a7054949eedbaac, type: 3}
   m_tillCooldownSource: {fileID: 11400000, guid: 1e97484b64ac9074cba7a4ed87f96724, type: 2}
   m_tillCooldown: 2

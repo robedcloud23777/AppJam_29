@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     {
         cooldowns.OnUpdate();
         animation.OnUpdate();
+        inventory.OnUpdate();
     }
     private void FixedUpdate()
     {

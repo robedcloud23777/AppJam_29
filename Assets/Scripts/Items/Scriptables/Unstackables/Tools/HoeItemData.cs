@@ -8,8 +8,10 @@ using UnityEngine;
 public class HoeItemData : ToolItemData
 {
     [Header("Hoe")]
+    [SerializeField] TilledLand m_tilledLandPrefab;
     [SerializeField] CooldownSource m_tillCooldownSource;
     [SerializeField] float m_tillCooldown;
+    public TilledLand tilledLandPrefab => m_tilledLandPrefab;
     public CooldownSource tillCooldownSource => m_tillCooldownSource;
     public float tillCooldown => m_tillCooldown;
     public override Item Create()
@@ -29,7 +31,7 @@ public class HoeItem : ToolItem, ICooldownDisplayed
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
-        if(Input.GetMouseButtonDown(0) && !data.tillCooldownSource.isOnCooldown)
+        if (Input.GetMouseButtonDown(0) && !data.tillCooldownSource.isOnCooldown)
         {
             if(!Physics2D.BoxCast(new Vector2(Mathf.Round(wielder.transform.position.x), Mathf.Round(wielder.transform.position.y)), Vector2.one, 0.0f, Vector2.up, 0.0f, LayerMask.GetMask("Map")))
             {
@@ -42,6 +44,9 @@ public class HoeItem : ToolItem, ICooldownDisplayed
     }
     void Till()
     {
+        Debug.Log("Till");
         Vector2 pos = new Vector2(Mathf.Round(wielder.transform.position.x), Mathf.Round(wielder.transform.position.y));
+        TilledLand tmp = data.tilledLandPrefab.Instantiate() as TilledLand;
+        tmp.transform.position = pos;
     }
 }

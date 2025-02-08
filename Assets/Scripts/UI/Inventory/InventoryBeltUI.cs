@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class InventoryBeltUI : MonoBehaviour
 {
+    [SerializeField] Transform slotIndicator;
     [SerializeField] InventorySlotUI slotPrefab;
     [SerializeField] Transform slotAnchor;
     List<InventorySlotUI> slots = new();
@@ -20,5 +21,9 @@ public class InventoryBeltUI : MonoBehaviour
             tmp.Set(player.slots[i]);
             slots.Add(tmp);
         }
+    }
+    private void Update()
+    {
+        slotIndicator.transform.position = slots[player.equippedSlotIndex].transform.position;
     }
 }

@@ -20,6 +20,7 @@ public abstract class ToolItem : Item
             if(m_tool == null)
             {
                 m_tool = MonoBehaviour.Instantiate(data.prefab);
+                m_tool.gameObject.SetActive(false);
             }
             return m_tool;
         }

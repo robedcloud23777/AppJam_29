@@ -38,7 +38,7 @@ public class InventorySlotUI : MonoBehaviour
             itemIcon.sprite = displaying.data.itemIcon;
             itemIcon.gameObject.SetActive(true);
         }
-        if(displaying is ICooldownDisplayed)
+        if (displaying is ICooldownDisplayed)
         {
             cooldownScaler.gameObject.SetActive(true);
             CooldownDisplayUpdate();
