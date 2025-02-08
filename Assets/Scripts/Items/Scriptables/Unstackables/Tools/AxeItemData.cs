@@ -29,6 +29,7 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
     }
     public float cooldownLeft => data.attackCooldownSource.cooldownLeft / data.attackCooldownSource.cooldown;
     bool attacking = false;
+    public override AnimationType heldAnimation => AnimationType.Axe;
     public override void OnWield(Player wielder)
     {
         base.OnWield(wielder);

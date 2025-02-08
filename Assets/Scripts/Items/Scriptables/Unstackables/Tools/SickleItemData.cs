@@ -26,6 +26,7 @@ public class SickleItem : ToolItem, ICooldownDisplayed, IStatDisplayed
         this.data = data;
     }
     public float cooldownLeft => data.harvestCooldownSource.cooldownLeft / data.harvestCooldownSource.cooldown;
+    public override AnimationType heldAnimation => AnimationType.Sickle;
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();

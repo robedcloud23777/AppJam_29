@@ -23,6 +23,7 @@ public class SeedItem : StackableItem
     }
     bool seeding = false;
     const float seedingSpeedMultiplier = 0.75f;
+    public override AnimationType heldAnimation => AnimationType.Seed;
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
@@ -31,6 +32,7 @@ public class SeedItem : StackableItem
             if (!seeding)
             {
                 seeding = true;
+                wielder.animation.SetSeeding(true);
                 wielder.movement.speedMultiplier *= seedingSpeedMultiplier;
             }
         }
@@ -39,6 +41,7 @@ public class SeedItem : StackableItem
             if (seeding)
             {
                 seeding = false;
+                wielder.animation.SetSeeding(false);
                 wielder.movement.speedMultiplier /= seedingSpeedMultiplier;
             }
         }
@@ -68,8 +71,8 @@ public class SeedItem : StackableItem
         if (seeding)
         {
             seeding = false;
+            wielder.animation.SetSeeding(false);
             wielder.movement.speedMultiplier /= seedingSpeedMultiplier;
         }
     }
-    public override AnimationType heldAnimation => base.heldAnimation;
 }

@@ -37,8 +37,17 @@ public class Player_Animation : MonoBehaviour
         foreach (var i in anim.GetBehaviours<AttackStartBehaviour>()) i.onAttackStart += () => { onAttackStart?.Invoke(); };
         foreach (var i in anim.GetBehaviours<AttackEndBehaviour>()) i.onAttackEnd += () => { onAttackEnd?.Invoke(); };
     }
+    readonly int seedingID = Animator.StringToHash("Seeding");
+    public void SetSeeding(bool seeding)
+    {
+        anim.SetBool(seedingID, seeding);
+    }
 }
 public enum AnimationType
 {
-    None = 0
+    None = 0,
+    Hoe = 1,
+    Sickle = 2,
+    Axe = 3,
+    Seed = 4
 }

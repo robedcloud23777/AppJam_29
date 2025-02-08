@@ -30,18 +30,24 @@ public class HoeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
         this.data = data;
     }
     public float cooldownLeft => data.tillCooldownSource.cooldownLeft / data.tillCooldownSource.cooldown;
+    public override AnimationType heldAnimation => AnimationType.Hoe;
     public override void OnWieldUpdate()
     {
         base.OnWieldUpdate();
         if (Input.GetMouseButton(0) && UIScanner.ScanUI().Count <= 0 && !data.tillCooldownSource.isOnCooldown)
         {
             Vector2 pos = new Vector2(Mathf.Round(wielder.transform.position.x), Mathf.Round(wielder.transform.position.y));
-            if (!Physics2D.BoxCast(pos, new Vector2(0.49f, 0.49f), 0.0f, Vector2.up, 0.0f, LayerMask.GetMask("Map")))
+            RaycastHit2D hit = Physics2D.BoxCast(pos, new Vector2(0.49f, 0.49f), 0.0f, Vector2.up, 0.0f, LayerMask.GetMask("Map"));
+            if (hit.transform == null)
             {
                 Till(pos);
                 data.tillCooldownSource.cooldown = data.tillCooldown;
                 data.tillCooldownSource.cooldownLeft = data.tillCooldown;
                 wielder.cooldowns.AddCooldown(data.tillCooldownSource);
+            }
+            else
+            {
+                Debug.Log(hit.transform.name);
             }
         }
     }
