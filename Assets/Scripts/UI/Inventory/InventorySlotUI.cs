@@ -10,7 +10,11 @@ public class InventorySlotUI : MonoBehaviour
     [SerializeField] Image itemIcon;
     [SerializeField] TMP_Text itemCount;
 
+    [Header("Cooldowns")]
+    [SerializeField] Transform cooldownScaler;
+
     public InventorySlot origin { get; private set; }
+    Item displaying = null;
     public void Set(InventorySlot slot)
     {
         origin = slot;
@@ -21,12 +25,25 @@ public class InventorySlotUI : MonoBehaviour
     }
     void OnItemChange()
     {
-        if (origin.item == null) itemIcon.gameObject.SetActive(false);
+        if(displaying != null)
+        {
+
+        }
+
+        displaying = origin.item;
+
+        if (displaying == null) itemIcon.gameObject.SetActive(false);
         else
         {
-            itemIcon.sprite = origin.item.data.itemIcon;
+            itemIcon.sprite = displaying.data.itemIcon;
             itemIcon.gameObject.SetActive(true);
         }
+        if(displaying is ICooldownDisplayed)
+        {
+            cooldownScaler.gameObject.SetActive(true);
+            CooldownDisplayUpdate();
+        }
+        else cooldownScaler.gameObject.SetActive(false);
     }
     void OnCountChange()
     {
@@ -36,5 +53,17 @@ public class InventorySlotUI : MonoBehaviour
             itemCount.text = $"x{origin.count}";
             itemCount.gameObject.SetActive(true);
         }
+    }
+    private void Update()
+    {
+        if(displaying is ICooldownDisplayed)
+        {
+            CooldownDisplayUpdate();
+        }
+    }
+    void CooldownDisplayUpdate()
+    {
+        ICooldownDisplayed tmp = displaying as ICooldownDisplayed;
+        cooldownScaler.localScale = new Vector2(1.0f, tmp.cooldownLeft);
     }
 }

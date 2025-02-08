@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_itemName:
     en: 
-    kr: 
+    kr: "\uB3CC"
   m_description:
     en: 
-    kr: 
-  m_itemIcon: {fileID: 0}
+    kr: "\uB3CC\uC774\uB2E4."
+  m_itemIcon: {fileID: 21300000, guid: 62ba2f682167a0443889a68689a04dd8, type: 3}
   m_category: 0
   m_maxStack: 64

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapGenerator : MonoBehaviour, ISavable
+public class MapManager : MonoBehaviour, ISavable
 {
     bool loaded = false;
     void Start()

@@ -23,7 +23,8 @@ public class Player_Animation : MonoBehaviour
     readonly int animationTypeID = Animator.StringToHash("AnimationType");
     void OnEquippedItemChange(Item item)
     {
-        anim.SetInteger(animationTypeID, (int)item.heldAnimation);
+        if(item == null) anim.SetInteger(animationTypeID, (int)AnimationType.None);
+        else anim.SetInteger(animationTypeID, (int)item.heldAnimation);
     }
 }
 public enum AnimationType

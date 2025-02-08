@@ -6,7 +6,7 @@ using UnityEngine;
 
 public static class Settings
 {
-    static Language m_language = Language.English;
+    static Language m_language = Language.Korean;
     public static Language language
     {
         get => m_language;
