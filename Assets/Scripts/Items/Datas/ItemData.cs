@@ -22,8 +22,6 @@ public abstract class Item
 {
     public readonly ItemData data;
     public virtual bool canDrop => true;
-    public virtual LangText GetName() => data.itemName;
-    public virtual LangText GetDescription() => data.description;
     public Item(ItemData data)
     {
         this.data = data;
