@@ -2,7 +2,8 @@ using UnityEngine;
 
 public abstract class Interaction : MonoBehaviour
 {
-    public abstract LangText interactionName { get; }
+    [SerializeField] LangText m_interactionName;
+    public LangText interactionName => m_interactionName;
     public abstract void OnInteract();
     Player_Interactions player;
 

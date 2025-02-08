@@ -32,6 +32,7 @@ public class Player_Statistics : MonoBehaviour, ISavable
         }
     }
     [SerializeField] int m_chillExperience = 0;
+    [SerializeField] Sound chillLevelUpSound;
     public Action onChillExperienceChange;
     public Action<int> onChillExperienceEarn;
     public int chillExperience
@@ -46,6 +47,7 @@ public class Player_Statistics : MonoBehaviour, ISavable
             {
                 chillExperience -= chillExperienceRequired;
                 chillLevel++;
+                AudioManager.Instance.PlaySound(chillLevelUpSound);
             }
         }
     }

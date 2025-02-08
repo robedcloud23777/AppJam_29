@@ -16,6 +16,9 @@ public class Player_Movement : MonoBehaviour, ISavable
     [SerializeField] float chillTimeRequired;
     [SerializeField] int chillExperienceGained;
 
+    [Header("Sound")]
+    [SerializeField] AudioSource footsteps;
+
     public int lookingDir { get; private set; } = 1;
     public Vector2 move { get; private set; }
     public float speedMultiplier = 1.0f;
@@ -59,6 +62,7 @@ public class Player_Movement : MonoBehaviour, ISavable
         
         if (move.magnitude < 0.01f)
         {
+            if (footsteps.isPlaying) footsteps.Stop();
             chillTime += Time.fixedDeltaTime;
             if (chillTime >= chillTimeRequired)
             {
@@ -68,6 +72,7 @@ public class Player_Movement : MonoBehaviour, ISavable
         }
         else
         {
+            if(!footsteps.isPlaying) footsteps.Play();
             chillTime = 0.0f;
         }
     }

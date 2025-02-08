@@ -25,3 +25,6 @@ MonoBehaviour:
   m_tillCooldownSource: {fileID: 11400000, guid: 1e97484b64ac9074cba7a4ed87f96724, type: 2}
   m_tillCooldown: 2
   m_tillingExperience: 20
+  m_tillSound:
+    clip: {fileID: 8300000, guid: 6c7e7ce82ce25ba4f8412ad54595f358, type: 3}
+    volume: 1

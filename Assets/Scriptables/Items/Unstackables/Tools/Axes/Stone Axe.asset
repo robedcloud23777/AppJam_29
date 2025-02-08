@@ -25,3 +25,6 @@ MonoBehaviour:
   m_attackCooldownSource: {fileID: 11400000, guid: f6183bd1d81ec0443bc32c5bb310d69c, type: 2}
   m_attackCooldown: 1
   m_chopExperience: 175
+  m_chopSound:
+    clip: {fileID: 8300000, guid: 360209101e7eabc44bf8046e0c4fd31b, type: 3}
+    volume: 1

@@ -12,10 +12,12 @@ public class AxeItemData : ToolItemData
     [SerializeField] CooldownSource m_attackCooldownSource;
     [SerializeField] float m_attackCooldown;
     [SerializeField] int m_chopExperience;
+    [SerializeField] Sound m_chopSound;
     public float damage => m_damage;
     public CooldownSource attackCooldownSource => m_attackCooldownSource;
     public float attackCooldown => m_attackCooldown;
     public int chopExperience => m_chopExperience;
+    public Sound chopSound => m_chopSound;
     public override Item Create()
     {
         return new AxeItem(this);
@@ -82,6 +84,7 @@ public class AxeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
                 toolType = ToolType.Axe
             }).fatal) wielder.statistics.chillExperience += data.chopExperience;
             hit = true;
+            AudioManager.Instance.PlaySound(data.chopSound);
         }
     }
     public IEnumerable<LangText> GetStats()

@@ -9,6 +9,7 @@ public class Player_Inventory : Inventory, ISavable
     [SerializeField] Transform m_equipmentAnchor;
     [SerializeField] ItemDataIntPair[] startContent;
     [SerializeField] ItemObtainText obtainTextPrefab;
+    [SerializeField] float dropForce = 4.0f;
     public Transform equipmentAnchor => m_equipmentAnchor;
     internal void OnAwake()
     {
@@ -83,7 +84,10 @@ public class Player_Inventory : Inventory, ISavable
     }
     public void DropItem(Item item, int count)
     {
-
+        DroppedItem tmp = DroppedItem.Create();
+        tmp.slot.SetItem(item);
+        tmp.slot.count = count;
+        tmp.rb.linearVelocity = Vector2.right * origin.movement.lookingDir * dropForce;
     }
 
     public void Save(SaveData data)

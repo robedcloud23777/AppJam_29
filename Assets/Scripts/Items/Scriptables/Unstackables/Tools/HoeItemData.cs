@@ -12,10 +12,12 @@ public class HoeItemData : ToolItemData
     [SerializeField] CooldownSource m_tillCooldownSource;
     [SerializeField] float m_tillCooldown;
     [SerializeField] int m_tillingExperience;
+    [SerializeField] Sound m_tillSound;
     public TilledLand tilledLandPrefab => m_tilledLandPrefab;
     public CooldownSource tillCooldownSource => m_tillCooldownSource;
     public float tillCooldown => m_tillCooldown;
     public int tillingExperience => m_tillingExperience;
+    public Sound tillSound => m_tillSound;
     public override Item Create()
     {
         return new HoeItem(this);
@@ -53,6 +55,7 @@ public class HoeItem : ToolItem, ICooldownDisplayed, IStatDisplayed
     }
     void Till(Vector2 pos)
     {
+        AudioManager.Instance.PlaySound(data.tillSound);
         wielder.statistics.chillExperience += data.tillingExperience;
         TilledLand tmp = data.tilledLandPrefab.Instantiate() as TilledLand;
         tmp.transform.position = pos;

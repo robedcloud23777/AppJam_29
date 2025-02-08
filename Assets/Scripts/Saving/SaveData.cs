@@ -7,4 +7,5 @@ public class SaveData
 {
     public DataUnit player = new();
     public List<DataUnit> map = new();
+    public List<DataUnit> droppedItems = new();
 }
