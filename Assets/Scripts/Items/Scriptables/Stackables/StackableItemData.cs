@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Stackable Item Data", menuName = "Scriptables/Stackables/Item", order = 0)]
+[CreateAssetMenu(fileName = "Stackable Item Data", menuName = "Scriptables/Items/Stackables/Item", order = 0)]
 public class StackableItemData : ItemData
 {
     [Header("StackableItem")]

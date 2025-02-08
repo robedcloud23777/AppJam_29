@@ -15,12 +15,10 @@ public class Player_Animation : MonoBehaviour
         origin.inventory.onEquippedItemChange += OnEquippedItemChange;
         AddAttackCallbacks();
     }
-    readonly int moveXID = Animator.StringToHash("MoveX");
-    readonly int moveYID = Animator.StringToHash("MoveY");
+    readonly int movingID = Animator.StringToHash("Moving");
     public void OnUpdate()
     {
-        anim.SetFloat(moveXID, origin.movement.move.x);
-        anim.SetFloat(moveYID, origin.movement.move.y);
+        anim.SetBool(movingID, origin.movement.move.magnitude > 0.1f);
     }
     readonly int animationTypeID = Animator.StringToHash("AnimationType");
     void OnEquippedItemChange(Item item)

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 46b1b379c2e93b94abdf56d59f1be2c1
+guid: 6a9ab40d04483274cb959d66cd12dfcd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3289194727115348269
-    second: chillguy_right_walking__0
+      213: 6563066755110389082
+    second: Soil_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.34587815, y: 0.65053755}
-  spritePixelsToUnits: 32
-  spriteBorder: {x: 0, y: 9, z: 10, w: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chillguy_right_walking__0
+      name: Soil_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
-        width: 23
-        height: 24
+        y: 0
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d6a33592de6a52d0800000000000000
-      internalID: -3289194727115348269
+      spriteID: a55c78fe072b41b50800000000000000
+      internalID: 6563066755110389082
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      chillguy_right_walking__0: -3289194727115348269
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

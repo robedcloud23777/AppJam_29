@@ -63,7 +63,7 @@ public class InventorySlotUIHandler : MonoBehaviour
                 {
                     if (i.gameObject.TryGetComponent(out InventorySlotUI slot))
                     {
-                        grabbingSlot.count -= 1 - slot.origin.Insert(grabbingSlot.item, 1);
+                        grabbingSlot.count -= 1 - slot.origin.Insert(grabbingSlot.item.Copy(), 1);
                     }
                 }
             }

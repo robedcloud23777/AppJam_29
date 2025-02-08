@@ -9,6 +9,7 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] float moveSpeed;
     [SerializeField] Transform rotator;
     public Vector2 move { get; private set; }
+    public float speedMultiplier = 1.0f;
     internal void OnAwake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,7 +18,7 @@ public class Player_Movement : MonoBehaviour
     {
         move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (move.x < 0.0f) rotator.localScale = new Vector2(-1.0f, 1.0f);
-        else rotator.localScale = new Vector2(1.0f, 1.0f);
-        rb.linearVelocity = move * moveSpeed;
+        else if(move.x > 0.0f) rotator.localScale = new Vector2(1.0f, 1.0f);
+        rb.linearVelocity = move * moveSpeed * speedMultiplier;
     }
 }
