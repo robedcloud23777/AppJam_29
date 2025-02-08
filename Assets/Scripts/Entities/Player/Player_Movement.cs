@@ -15,6 +15,6 @@ public class Player_Movement : MonoBehaviour
     internal void OnFixedUpdate()
     {
         move = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        rb.velocity = move * moveSpeed * Time.fixedDeltaTime;
+        rb.linearVelocity = move * moveSpeed * Time.fixedDeltaTime;
     }
 }
