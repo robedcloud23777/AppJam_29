@@ -4,15 +4,15 @@
             "content": [
                 {
                     "key": "money",
-                    "value": 0
+                    "value": 1600
                 },
                 {
                     "key": "chillLevel",
-                    "value": 2
+                    "value": 13
                 },
                 {
                     "key": "chillExperience",
-                    "value": 620
+                    "value": 325
                 }
             ]
         },
@@ -20,11 +20,11 @@
             "content": [
                 {
                     "key": "posX",
-                    "value": 10.063164710998536
+                    "value": 17.75699234008789
                 },
                 {
                     "key": "posY",
-                    "value": -19.705615997314454
+                    "value": -7.937131881713867
                 }
             ]
         },
@@ -34,12 +34,12 @@
         "m_strings": {
             "content": [
                 {
-                    "key": "cooldowns",
-                    "value": "{\"cooldowns\":[]}"
+                    "key": "inventory",
+                    "value": "{\"slotSaves\":[{\"item\":{\"instanceID\":49366},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":49228},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":49910},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":49832},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":49192},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":31},{\"item\":{\"instanceID\":49192},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":15},{\"item\":{\"instanceID\":49192},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":14},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":49268},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":49828},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0}]}"
                 },
                 {
-                    "key": "inventory",
-                    "value": "{\"slotSaves\":[{\"item\":{\"instanceID\":43040},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":42956},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":-402018},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":1},{\"item\":{\"instanceID\":43072},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":64},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0},{\"item\":{\"instanceID\":0},\"data\":{\"m_integers\":{\"content\":[]},\"m_floats\":{\"content\":[]},\"m_bools\":{\"content\":[]},\"m_strings\":{\"content\":[]}},\"count\":0}]}"
+                    "key": "cooldowns",
+                    "value": "{\"cooldowns\":[]}"
                 }
             ]
         }
@@ -725,38 +725,6 @@
                 "content": [
                     {
                         "key": "posX",
-                        "value": 16.180500030517579
-                    },
-                    {
-                        "key": "posY",
-                        "value": -15.774625778198243
-                    },
-                    {
-                        "key": "hp",
-                        "value": 100.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "PineTree"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
                         "value": -31.289501190185548
                     },
                     {
@@ -986,38 +954,6 @@
                     {
                         "key": "posY",
                         "value": -0.2546253204345703
-                    },
-                    {
-                        "key": "hp",
-                        "value": 100.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "PineTree"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 12.580497741699219
-                    },
-                    {
-                        "key": "posY",
-                        "value": -20.95462417602539
                     },
                     {
                         "key": "hp",
@@ -1498,38 +1434,6 @@
                     {
                         "key": "posY",
                         "value": 15.79537582397461
-                    },
-                    {
-                        "key": "hp",
-                        "value": 100.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "PineTree"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 5.470497131347656
-                    },
-                    {
-                        "key": "posY",
-                        "value": -18.904624938964845
                     },
                     {
                         "key": "hp",
@@ -2613,38 +2517,6 @@
                 "content": [
                     {
                         "key": "posX",
-                        "value": 12.580497741699219
-                    },
-                    {
-                        "key": "posY",
-                        "value": -20.95462417602539
-                    },
-                    {
-                        "key": "hp",
-                        "value": 100.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "PineTree"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
                         "value": -52.96950149536133
                     },
                     {
@@ -3541,38 +3413,6 @@
                 "content": [
                     {
                         "key": "posX",
-                        "value": 21.030498504638673
-                    },
-                    {
-                        "key": "posY",
-                        "value": 1.795374870300293
-                    },
-                    {
-                        "key": "hp",
-                        "value": 100.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "PineTree"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
                         "value": -41.96950149536133
                     },
                     {
@@ -3829,7 +3669,679 @@
                 "content": [
                     {
                         "key": "posX",
-                        "value": 21.0
+                        "value": 0.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 1.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 1.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 1.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 2.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 1.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 2.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 2.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 1.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 2.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 0.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": 2.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 16.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -7.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 17.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -7.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 17.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -8.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 16.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -8.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 16.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -9.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 17.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -9.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 18.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -9.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 19.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -9.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 19.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -8.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 18.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -8.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 18.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -7.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 19.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -7.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 20.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -9.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 20.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -10.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 19.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -10.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 18.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -10.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 17.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -10.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 16.0
+                    },
+                    {
+                        "key": "posY",
+                        "value": -10.0
+                    }
+                ]
+            },
+            "m_bools": {
+                "content": []
+            },
+            "m_strings": {
+                "content": [
+                    {
+                        "key": "prefab",
+                        "value": "TilledLand"
+                    }
+                ]
+            }
+        },
+        {
+            "m_integers": {
+                "content": []
+            },
+            "m_floats": {
+                "content": [
+                    {
+                        "key": "posX",
+                        "value": 20.0
                     },
                     {
                         "key": "posY",
@@ -3861,7 +4373,7 @@
                     },
                     {
                         "key": "posY",
-                        "value": -9.0
+                        "value": -7.0
                     }
                 ]
             },
@@ -3889,7 +4401,7 @@
                     },
                     {
                         "key": "posY",
-                        "value": -9.0
+                        "value": -12.0
                     }
                 ]
             },
@@ -3917,7 +4429,7 @@
                     },
                     {
                         "key": "posY",
-                        "value": -8.0
+                        "value": -12.0
                     }
                 ]
             },
@@ -3941,179 +4453,11 @@
                 "content": [
                     {
                         "key": "posX",
-                        "value": 20.0
+                        "value": 19.0
                     },
                     {
                         "key": "posY",
-                        "value": -10.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 21.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -10.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 22.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -9.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 23.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -10.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 9.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -18.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 11.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -21.0
-                    }
-                ]
-            },
-            "m_bools": {
-                "content": []
-            },
-            "m_strings": {
-                "content": [
-                    {
-                        "key": "prefab",
-                        "value": "TilledLand"
-                    }
-                ]
-            }
-        },
-        {
-            "m_integers": {
-                "content": []
-            },
-            "m_floats": {
-                "content": [
-                    {
-                        "key": "posX",
-                        "value": 11.0
-                    },
-                    {
-                        "key": "posY",
-                        "value": -20.0
+                        "value": -12.0
                     }
                 ]
             },
