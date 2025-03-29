@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PooledPrefab<T> : MonoBehaviour where T : PooledPrefab<T>

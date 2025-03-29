@@ -4,8 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using NUnit.Framework.Constraints;
-using static UnityEditor.Progress;
 
 public class ShopTab : Tab
 {
